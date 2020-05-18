@@ -1,0 +1,9 @@
+.layoutWrapper {
+  display: flex;
+}
+
+.layoutMain {
+  min-height: 100vh;
+  padding: rem(0 60px 0 320px);
+  width: 100%;
+}

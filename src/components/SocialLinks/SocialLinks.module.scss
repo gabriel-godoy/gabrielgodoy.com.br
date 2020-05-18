@@ -1,0 +1,25 @@
+.socialLinksWrapper {
+  margin: rem(32px auto);
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.socialLinksList {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.socialLinksLink {
+  color: $texts;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: $highlight;
+  }
+}

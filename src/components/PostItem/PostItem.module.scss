@@ -1,0 +1,90 @@
+.postItemLink {
+  color: $texts;
+  display: flex;
+  text-decoration: none;
+
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.postItemWrapper {
+  align-items: center;
+  border-bottom: 1px solid $borders;
+  display: flex;
+  padding: rem(32px 48px);
+  width: 100%;
+
+  body#grid & {
+    border: none;
+    padding: rem(32px 16px);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: $mediaLarge) {
+    & {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: rem(32px 16px);
+    }
+  }
+}
+
+.postItemTag {
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: rem(20.8px);
+  font-weight: 700;
+  justify-content: center;
+  min-height: 90px;
+  min-width: 90px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $mediaLarge) {
+    border-radius: 0;
+    font-size: rem(16px);
+    min-height: auto;
+    min-width: auto;
+    padding: rem(3.2px 8px);
+    margin-bottom: rem(11.2px);
+  }
+
+  body#grid & {
+    margin-bottom: rem(24px);
+  }
+}
+
+.postItemInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: rem(24px);
+
+  @media screen and (max-width: $mediaLarge) {
+    margin: 0;
+  }
+
+  .postItemDate {
+    font-size: 14px;
+    margin-bottom: rem(8px);
+  }
+
+  .postItemTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin: rem(3.2px 0 4px);
+
+    body#grid & {
+      line-height: 1.1;
+      margin: rem(12.8px 0);
+    }
+  }
+
+  .postItemDescription {
+    font-size: rem(18px);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}

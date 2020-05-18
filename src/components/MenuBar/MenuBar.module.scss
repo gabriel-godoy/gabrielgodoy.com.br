@@ -1,0 +1,85 @@
+.menuBarWrapper {
+  align-items: center;
+  background: var(--mediumBackground);
+  border-left: 1px solid $borders;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding: rem(12.8px 0);
+  position: fixed;
+  right: 0;
+  width: rem(60px);
+  transition: background 0.5s;
+
+  @media screen and (max-width: $mediaLarge) {
+    border-top: 1px solid $borders;
+    bottom: 0;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.menuBarGroup {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $mediaLarge) {
+    flex-direction: row;
+  }
+}
+
+.menuBarLink {
+  display: block;
+
+  &.menuBarLinkActive {
+    span {
+      color: $highlight;
+    }
+  }
+}
+
+.menuBarItem {
+  color: $texts;
+  cursor: pointer;
+  display: block;
+  height: rem(60px);
+  padding: rem(17.6px);
+  position: relative;
+  width: rem(60px);
+
+  &.light {
+    color: #d4d400;
+    &:hover {
+      color: #e2e240;
+    }
+  }
+
+  &:hover {
+    color: $highlight;
+  }
+
+  &.display {
+    @media screen and (max-width: $mediaLarge) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $mediaLarge) {
+    &:hover {
+      color: $highlight;
+    }
+  }
+
+  @media screen and (max-width: $mediaLarge) {
+    & {
+      height: rem(51.2px);
+      padding: rem(14.4);
+      position: relative;
+      width: rem(51.2px);
+    }
+  }
+}

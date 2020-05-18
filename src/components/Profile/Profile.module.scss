@@ -1,0 +1,33 @@
+.profileWrapper {
+  color: $texts;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileLink {
+  color: $texts;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: #1fa1f2;
+  }
+}
+
+.profileAuthor {
+  font-size: rem(25.6px);
+  margin: rem(8px auto);
+}
+
+.profilePosition {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: rem(16px);
+}
+
+.profileDescription {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}

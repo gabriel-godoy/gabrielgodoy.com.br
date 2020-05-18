@@ -1,0 +1,28 @@
+.menuLinksWrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.menuLinksList {
+  font-size: 18px;
+  font-weight: 300;
+
+  .menuLinksItem {
+    padding: rem(8px 0);
+  }
+}
+
+.menuLinksLink {
+  color: $texts;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &.menuLinksItemActive {
+    color: $highlight;
+  }
+
+  &:hover {
+    color: $highlight;
+  }
+}

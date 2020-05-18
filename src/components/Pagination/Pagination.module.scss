@@ -1,0 +1,23 @@
+.paginationWrapper {
+  align-items: center;
+  border-top: 1px solid $borders;
+  color: $texts;
+  display: flex;
+  padding: rem(24px 48px);
+  justify-content: space-between;
+
+  @media screen and (min-width: $mediaLarge) {
+    font-size: rem(12.8px);
+    padding: rem(16px);
+  }
+
+  a {
+    color: $texts;
+    text-decoration: none;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
