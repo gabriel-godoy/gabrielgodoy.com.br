@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import getThemeColor from './../../utils/getThemeColor'
 import Avatar from '../Avatar/Avatar'
 
 import styles from './Profile.module.scss'
@@ -24,11 +26,20 @@ const Profile = () => {
 
   return (
     <section className={styles.profileWrapper}>
-      <Link className={styles.profileLink} to="/">
+      <AniLink
+        bg={getThemeColor()}
+        cover
+        direction="left"
+        duration={0.6}
+        className={styles.profileLink}
+        to="/"
+      >
         <Avatar />
-        <h1 className={styles.profileAuthor}>{author}</h1>
-        <h2 className={styles.profilePosition}>{position}</h2>
-      </Link>
+        <h1 className={styles.profileAuthor}>
+          {author}
+          <small className={styles.profilePosition}>{position}</small>
+        </h1>
+      </AniLink>
       <p className={styles.profileDescription}>{description}</p>
     </section>
   )

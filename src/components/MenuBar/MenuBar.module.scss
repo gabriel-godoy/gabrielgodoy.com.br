@@ -1,7 +1,7 @@
 .menuBarWrapper {
   align-items: center;
   background: var(--mediumBackground);
-  border-left: 1px solid $borders;
+  border-left: 1px solid var(--borders);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -13,7 +13,7 @@
   transition: background 0.5s;
 
   @media screen and (max-width: $mediaLarge) {
-    border-top: 1px solid $borders;
+    border-top: 1px solid var(--borders);
     bottom: 0;
     flex-direction: row;
     height: auto;
@@ -37,13 +37,13 @@
 
   &.menuBarLinkActive {
     span {
-      color: $highlight;
+      color: var(--highlight);
     }
   }
 }
 
 .menuBarItem {
-  color: $texts;
+  color: var(--texts);
   cursor: pointer;
   display: block;
   height: rem(60px);
@@ -59,7 +59,7 @@
   }
 
   &:hover {
-    color: $highlight;
+    color: var(--highlight);
   }
 
   &.display {
@@ -70,7 +70,7 @@
 
   @media screen and (min-width: $mediaLarge) {
     &:hover {
-      color: $highlight;
+      color: var(--highlight);
     }
   }
 

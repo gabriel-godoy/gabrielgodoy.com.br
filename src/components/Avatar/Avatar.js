@@ -11,8 +11,8 @@ const Avatar = () => {
         avatarImage: file(relativePath: { eq: "profile-photo.jpg" }) {
           childImageSharp {
             # Pode ser fixed ou fluid (fluid é sem tamanho fixo)
-            fixed(width: 60, height: 60) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 60) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -23,7 +23,7 @@ const Avatar = () => {
   return (
     <Img
       className={styles.profileImage}
-      fixed={avatarImage.childImageSharp.fixed}
+      fluid={avatarImage.childImageSharp.fluid}
     />
   )
 }

@@ -4,6 +4,7 @@ import Layout from '../components/Layout/Layout'
 import SEO from '../components/seo'
 import PostItem from '../components/PostItem/PostItem'
 import Pagination from '../components/Pagination/Pagination'
+import styles from '../components/ListWrapper/ListWrapper.module.scss'
 
 const BlogList = props => {
   const { currentPage, numPages } = props.pageContext
@@ -17,30 +18,31 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Home" />
-
-      {postList.map(
-        (
-          {
-            node: {
-              frontmatter: { background, category, date, description, title },
-              timeToRead,
-              fields: { slug },
+      <section className={styles.listWrapper}>
+        {postList.map(
+          (
+            {
+              node: {
+                frontmatter: { background, category, date, description, title },
+                timeToRead,
+                fields: { slug },
+              },
             },
-          },
-          index
-        ) => (
-          <PostItem
-            key={index}
-            slug={slug}
-            background={background}
-            category={category}
-            date={date}
-            timeToRead={timeToRead}
-            title={title}
-            description={description}
-          />
-        )
-      )}
+            index
+          ) => (
+            <PostItem
+              key={index}
+              slug={slug}
+              background={background}
+              category={category}
+              date={date}
+              timeToRead={timeToRead}
+              title={title}
+              description={description}
+            />
+          )
+        )}
+      </section>
 
       <Pagination
         isFirstPage={isFirstPage}

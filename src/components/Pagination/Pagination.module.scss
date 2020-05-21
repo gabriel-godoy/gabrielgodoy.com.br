@@ -1,7 +1,7 @@
 .paginationWrapper {
   align-items: center;
-  border-top: 1px solid $borders;
-  color: $texts;
+  border-top: 1px solid var(--borders);
+  color: var(--texts);
   display: flex;
   padding: rem(24px 48px);
   justify-content: space-between;
@@ -12,12 +12,12 @@
   }
 
   a {
-    color: $texts;
+    color: var(--texts);
     text-decoration: none;
     transition: color 0.5s;
 
     &:hover {
-      color: $highlight;
+      color: var(--highlight);
     }
   }
 }

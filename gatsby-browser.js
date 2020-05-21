@@ -9,3 +9,4 @@
 // O Arquivos gatsby-browser serve para importar bibliotecas externas
 // Ou criar algum evento fora do React
 import 'lazysizes'
+require('prismjs/themes/prism-tomorrow.css')

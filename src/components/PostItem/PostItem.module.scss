@@ -1,21 +1,25 @@
 .postItemLink {
-  color: $texts;
+  color: var(--texts);
   display: flex;
   text-decoration: none;
 
+  :global(body#grid) & {
+    background-color: var(--background);
+  }
+
   &:hover {
-    color: $highlight;
+    color: var(--highlight);
   }
 }
 
 .postItemWrapper {
   align-items: center;
-  border-bottom: 1px solid $borders;
+  border-bottom: 1px solid var(--borders);
   display: flex;
   padding: rem(32px 48px);
   width: 100%;
 
-  body#grid & {
+  :global(body#grid) & {
     border: none;
     padding: rem(32px 16px);
     flex-direction: column;
@@ -52,7 +56,7 @@
     margin-bottom: rem(11.2px);
   }
 
-  body#grid & {
+  :global(body#grid) & {
     margin-bottom: rem(24px);
   }
 }
@@ -76,7 +80,7 @@
     font-weight: 700;
     margin: rem(3.2px 0 4px);
 
-    body#grid & {
+    :global(body#grid) & {
       line-height: 1.1;
       margin: rem(12.8px 0);
     }

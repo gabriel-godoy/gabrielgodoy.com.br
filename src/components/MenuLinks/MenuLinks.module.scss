@@ -1,5 +1,5 @@
 .menuLinksWrapper {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $mediaLarge) {
     display: none;
   }
 }
@@ -14,15 +14,15 @@
 }
 
 .menuLinksLink {
-  color: $texts;
+  color: var(--texts);
   text-decoration: none;
   transition: color 0.5s;
 
   &.menuLinksItemActive {
-    color: $highlight;
+    color: var(--highlight);
   }
 
   &:hover {
-    color: $highlight;
+    color: var(--highlight);
   }
 }

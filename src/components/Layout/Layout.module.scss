@@ -1,9 +1,24 @@
 .layoutWrapper {
   display: flex;
+
+  @media screen and (max-width: $mediaLarge) {
+    flex-direction: column;
+  }
 }
 
 .layoutMain {
+  background: var(--background);
   min-height: 100vh;
   padding: rem(0 60px 0 320px);
   width: 100%;
+
+  :global(body#grid) & {
+    grid-template-areas:
+      'posts'
+      'paginations';
+  }
+
+  @media screen and (max-width: $mediaLarge) {
+    padding: 4.125rem 0 3rem 0;
+  }
 }

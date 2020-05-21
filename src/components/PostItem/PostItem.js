@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import getThemeColor from './../../utils/getThemeColor'
 
 import styles from './PostItem.module.scss'
 
@@ -14,7 +15,14 @@ const PostItem = ({
   description,
 }) => {
   return (
-    <Link to={slug} className={styles.postItemLink}>
+    <AniLink
+    bg={getThemeColor()}
+      cover
+      direction="right"
+      duration={0.6}
+      to={slug}
+      className={styles.postItemLink}
+    >
       <section className={styles.postItemWrapper}>
         <div className={styles.postItemTag} style={{ background }}>
           {category}
@@ -27,7 +35,7 @@ const PostItem = ({
           <p className={styles.postItemDescription}>{description}</p>
         </div>
       </section>
-    </Link>
+    </AniLink>
   )
 }
 
