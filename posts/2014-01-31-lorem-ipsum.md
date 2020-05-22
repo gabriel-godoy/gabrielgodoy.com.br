@@ -1,7 +1,8 @@
 ---
-date: 2014-01-31 05:54:23
-title: lorem Ipsum
+title: lorem Ipsumdfs
 description: So say goodbye to love and hold your head up high
+date: 2014-01-31T05:54:23.000Z
+image: assets/img/lake.jpg
 category: svg
 background: "#7d669e"
 ---
